@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #fff;
+  background: url('iit1.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.5rem;  /* space between Home and Research */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;   /* align with its own button */
+  background-color: rgba(0,0,0,0.8);
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: #ffd700;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: #ffd700;
+}
+
+a {
+  color: #ffdd88;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 0.9rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.cv-button-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.academics-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.academics-table th, .academics-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+
+.academics-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+}
+
+.logo-cell img {
+  max-width: 50px;  /* Adjust size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.group-photos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.group-photos img {
+  max-width: 300px;   /* Shrink if too big */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.group-photos img:hover {
+  transform: scale(1.05); /* Small zoom on hover */
+}
