@@ -208,3 +208,58 @@ footer {
 .group-photos img:hover {
   transform: scale(1.05); /* Small zoom on hover */
 }
+
+/* Fix visibility of football page text */
+
+.football-intro h2,
+.football-intro p {
+  color: #1f2937 !important;
+}
+
+.football-intro p {
+  line-height: 1.9;
+  opacity: 1;
+}
+
+.football-quote {
+  background: #f8fafc !important;
+  color: #1f2937 !important;
+  border-left: 4px solid #da291c;
+}
+
+.football-quote blockquote {
+  color: #1f2937 !important;
+  opacity: 1;
+}
+
+.football-quote p {
+  color: #475569 !important;
+  opacity: 1;
+}
+
+.football-closing {
+  background: #f1f5f9 !important;
+  color: #1f2937 !important;
+}
+
+.football-closing h2 {
+  color: #111827 !important;
+}
+
+.football-closing p {
+  color: #475569 !important;
+  opacity: 1;
+}
+
+.club-card-content h3,
+.club-card-content p {
+  opacity: 1;
+}
+
+.club-card-content h3 {
+  color: #111827 !important;
+}
+
+.club-card-content p {
+  color: #475569 !important;
+}
