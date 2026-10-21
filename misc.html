@@ -1,437 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Football & Personal Interests - Alipriyo Hoory</title>
-  <meta name="description"
-        content="The personal football interests of Alipriyo Hoory: Manchester United and Mohun Bagan.">
-
+  <title>Football &amp; Personal Interests - Alipriyo Hoory</title>
+  <meta name="description" content="The football interests of Alipriyo Hoory: Manchester United, Mohun Bagan, and Cristiano Ronaldo.">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Football page-specific styling -->
-  <style>
-    :root {
-      --football-red: #da291c;
-      --football-green: #006747;
-      --football-maroon: #7a1734;
-      --football-dark: #111827;
-      --football-muted: #64748b;
-      --football-border: #e5e7eb;
-    }
-
-    .football-page {
-      max-width: 1100px;
-      width: 92%;
-      margin: 38px auto 60px;
-    }
-
-    .football-hero {
-      position: relative;
-      min-height: 350px;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      border-radius: 18px;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(9, 17, 30, 0.92),
-          rgba(9, 17, 30, 0.45)
-        ),
-        url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1800&q=85")
-        center 55% / cover;
-      color: white;
-      margin-bottom: 35px;
-    }
-
-    .football-hero-content {
-      max-width: 700px;
-      padding: 42px;
-    }
-
-    .football-kicker {
-      display: inline-block;
-      color: #fca5a5;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .football-hero h2 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 1.08;
-      margin: 0 0 16px;
-      color: #fff;
-    }
-
-    .football-hero p {
-      max-width: 560px;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #e2e8f0;
-      margin: 0;
-    }
-
-    .football-intro {
-      max-width: 850px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .football-intro h2,
-    .football-section-heading {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      margin-bottom: 14px;
-    }
-
-    .football-intro p {
-      line-height: 1.9;
-      color: var(--football-muted);
-    }
-
-    .club-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-      margin: 28px 0 45px;
-    }
-
-    .club-card {
-      background: var(--card-background, #fff);
-      border: 1px solid var(--football-border);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .club-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
-    }
-
-    .club-card img {
-      display: block;
-      width: 100%;
-      height: 245px;
-      object-fit: cover;
-    }
-
-    .club-card-content {
-      padding: 25px;
-    }
-
-    .club-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .manutd .club-label {
-      color: var(--football-red);
-    }
-
-    .mohunbagan .club-label {
-      color: var(--football-green);
-    }
-
-    .club-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.5rem;
-    }
-
-    .club-card p {
-      color: var(--football-muted);
-      line-height: 1.8;
-      margin-bottom: 18px;
-    }
-
-    .club-link {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 600;
-      padding-bottom: 3px;
-      border-bottom: 2px solid currentColor;
-    }
-
-    .manutd .club-link {
-      color: var(--football-red);
-    }
-
-    .mohunbagan .club-link {
-      color: var(--football-green);
-    }
-
-    .football-quote {
-      padding: 30px;
-      margin: 35px 0;
-      text-align: center;
-      border-left: 4px solid var(--football-red);
-      background: var(--quote-background, #f8fafc);
-      border-radius: 0 12px 12px 0;
-    }
-
-    .football-quote blockquote {
-      margin: 0;
-      font-size: 1.15rem;
-      font-style: italic;
-      line-height: 1.9;
-    }
-
-    .football-quote p {
-      color: var(--football-muted);
-      margin: 14px 0 0;
-      font-size: 0.9rem;
-    }
-
-    .football-closing {
-      padding: 30px;
-      margin-top: 35px;
-      border-radius: 14px;
-      background: var(--closing-background, #f1f5f9);
-      text-align: center;
-    }
-
-    .football-closing h2 {
-      margin-top: 0;
-    }
-
-    .football-closing p {
-      line-height: 1.8;
-      color: var(--football-muted);
-    }
-
-    .club-link:focus-visible {
-      outline: 3px solid #64748b;
-      outline-offset: 4px;
-    }
-
-    @media (max-width: 700px) {
-      .football-page {
-        width: 94%;
-        margin-top: 22px;
-      }
-
-      .football-hero {
-        min-height: 300px;
-        border-radius: 12px;
-      }
-
-      .football-hero-content {
-        padding: 25px;
-      }
-
-      .club-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .club-card img {
-        height: 220px;
-      }
-
-      .football-quote,
-      .football-closing {
-        padding: 22px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .club-card {
-        transition: none;
-      }
-
-      .club-card:hover {
-        transform: none;
-      }
-    }
-  </style>
 </head>
-
 <body>
-
   <header class="hero">
     <div class="overlay">
       <h1>Miscellaneous</h1>
-
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
-
         <div class="dropdown">
-          <button class="dropbtn" type="button">
-            Research ▼
-          </button>
+          <button class="dropbtn" type="button">Research ▼</button>
           <div class="dropdown-content">
             <a href="areas.html">Research details</a>
             <a href="talks.html">Seminars</a>
           </div>
         </div>
-
         <a href="group.html">Miscellaneous</a>
-        <a href="misc.html" aria-current="page">
-          Personal interests
-        </a>
+        <a href="misc.html" aria-current="page">Personal interests</a>
       </nav>
     </div>
   </header>
 
   <main class="football-page">
-
-    <!-- Football-themed hero -->
-    <section class="football-hero"
-             aria-label="Football and personal interests">
+    <section class="football-hero" aria-label="Football and personal interests">
       <div class="football-hero-content">
-        <span class="football-kicker">
-          Beyond research
-        </span>
-
+        <span class="football-kicker">Beyond research</span>
         <h2>Football is a passion.</h2>
-
-        <p>
-          From the roar of Old Trafford to the pride and tradition
-          of Mohun Bagan, football has a special place in my life.
-          It is more than a game; it is about history, emotion,
-          loyalty, and unforgettable moments.
-        </p>
+        <p>From the roar of Old Trafford to the pride and tradition of Mohun Bagan, football has a special place in my life. It is more than a game: it is about history, emotion, loyalty, and unforgettable moments.</p>
       </div>
     </section>
 
-    <!-- Personal introduction -->
-    <section class="football-intro">
-      <h2>A little about my football world</h2>
-
-      <p>
-        As a PhD student in Physics, much of my time is spent
-        thinking about research, equations, and the universe.
-        Football offers a different kind of excitement: the drama
-        of a match, the joy of a great goal, the heartbreak of a
-        defeat, and the feeling of being part of something bigger
-        than yourself.
-      </p>
-
-      <p>
-        My two favourite clubs are Manchester United and Mohun Bagan.
-        They represent two different football cultures, but both
-        inspire the same passion and loyalty.
-      </p>
+    <section class="football-intro" aria-labelledby="football-world-heading">
+      <h2 id="football-world-heading">A little about my football world</h2>
+      <p>As a PhD student in Physics, much of my time is spent thinking about research, equations, and the universe. Football offers a different kind of excitement: the drama of a match, the joy of a great goal, the heartbreak of a defeat, and the feeling of being part of something bigger than yourself.</p>
+      <p>My two favourite clubs are Manchester United and Mohun Bagan. They represent two different football cultures, but both inspire the same passion and loyalty.</p>
     </section>
 
-    <!-- Favourite football clubs -->
     <section aria-labelledby="clubs-heading">
-      <h2 class="football-section-heading" id="clubs-heading">
-        The clubs I support
-      </h2>
-
+      <h2 class="football-section-heading" id="clubs-heading">The clubs I support</h2>
       <div class="club-grid">
-
-        <!-- Manchester United -->
         <article class="club-card manutd">
-          <img
-            src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1000&q=85"
-            alt="Football stadium with the atmosphere of a matchday"
-            loading="lazy"
-          >
-
+          <img src="manchester-united.jpg" alt="Manchester United football photograph" loading="lazy">
           <div class="club-card-content">
-            <span class="club-label">
-              The Red Devils
-            </span>
-
+            <span class="club-label">The Red Devils</span>
             <h3>Manchester United</h3>
-
-            <p>
-              A club with a remarkable history, legendary players,
-              dramatic comebacks, and a global community of supporters.
-              For me, supporting Manchester United means standing by
-              the club through its highs and lows and celebrating
-              the moments that make football unforgettable.
-            </p>
-
-            <a
-              class="club-link"
-              href="https://www.manutd.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit the official website ↗
-            </a>
+            <p>A club with a remarkable history, legendary players, dramatic comebacks, and a global community of supporters. Supporting Manchester United means standing by the club through its highs and lows and celebrating the moments that make football unforgettable.</p>
+            <a class="club-link" href="https://www.manutd.com/" target="_blank" rel="noopener noreferrer">Visit the official website ↗</a>
           </div>
         </article>
 
-        <!-- Mohun Bagan -->
         <article class="club-card mohunbagan">
-          <img
-            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=85"
-            alt="Football pitch ready for a match"
-            loading="lazy"
-          >
-
+          <img src="mohun-bagan.jpg" alt="Mohun Bagan football photograph" loading="lazy">
           <div class="club-card-content">
-            <span class="club-label">
-              Mariners • Green and Maroon
-            </span>
-
+            <span class="club-label">The Mariners · Green and Maroon</span>
             <h3>Mohun Bagan</h3>
-
-            <p>
-              Mohun Bagan is much more than a football club.
-              Its long history, connection with Kolkata, and place
-              in Indian football make it a source of immense pride.
-              The green-and-maroon colours represent a sporting
-              tradition that generations of supporters cherish.
-            </p>
-
-            <a
-              class="club-link"
-              href="https://en.wikipedia.org/wiki/Mohun_Bagan_Super_Giant"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit the official website ↗
-            </a>
+            <p>Mohun Bagan is much more than a football club. Its long history, connection with Kolkata, and place in Indian football make it a source of immense pride. The green-and-maroon colours represent a sporting tradition cherished by generations of supporters.</p>
+            <a class="club-link" href="https://www.mohunbagansupergiant.com/" target="_blank" rel="noopener noreferrer">Visit the official website ↗</a>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- Football philosophy -->
-    <section class="football-quote">
-      <blockquote>
-        “You will be nearer to heaven through football than through
-        the study of the Gita.”
-      </blockquote>
-
-      <p>
-        —  Swami Vivekananda
-      </p>
+    <section class="ronaldo-section" aria-labelledby="ronaldo-heading">
+      <div class="ronaldo-image-wrap">
+        <img src="cristiano-ronaldo.jpg" alt="Cristiano Ronaldo, a lifelong source of inspiration" loading="lazy">
+      </div>
+      <div class="ronaldo-content">
+        <span class="ronaldo-kicker">A lifelong inspiration</span>
+        <h2 id="ronaldo-heading">Cristiano Ronaldo</h2>
+        <p>Cristiano Ronaldo has been a motivation for me since his early days. His journey, relentless discipline, dedication to training, and determination to keep improving have inspired me for years.</p>
+        <p>What I admire most is the mindset: setting ambitious goals, working tirelessly towards them, learning from setbacks, and refusing to stop striving for excellence. His story reminds me that talent matters, but consistency, resilience, and hard work matter just as much.</p>
+        <p>For me, Ronaldo is more than a footballing icon; he is a lifelong source of motivation to keep pushing forward, both on and off the pitch.</p>
+      </div>
     </section>
 
-    <!-- Closing note -->
+    <section class="football-quote" aria-label="Football quote">
+      <blockquote>“You will be nearer to heaven through football than through the study of the Gita.”</blockquote>
+      <p>— Commonly attributed to Swami Vivekananda; the attribution should be verified against a reliable primary source.</p>
+    </section>
+
     <section class="football-closing">
       <h2>90 minutes. A lifetime of memories.</h2>
-
-      <p>
-        Whether it is a Manchester United match or a Mohun Bagan
-        fixture, football brings anticipation, emotion, and a
-        sense of belonging. Whatever happens on the pitch, the
-        love for the game remains.
-      </p>
+      <p>Whether it is a Manchester United match or a Mohun Bagan fixture, football brings anticipation, emotion, and a sense of belonging. Whatever happens on the pitch, the love for the game remains.</p>
     </section>
-
   </main>
 
   <footer>
     <p>© 2026 Alipriyo Hoory</p>
   </footer>
-
 </body>
 </html>
