@@ -209,57 +209,268 @@ footer {
   transform: scale(1.05); /* Small zoom on hover */
 }
 
-/* Fix visibility of football page text */
+/* =========================================================
+   Football personal-interest page (misc.html)
+   These rules are scoped to .football-page to avoid changing
+   the styling of the rest of the website.
+   ========================================================= */
 
-.football-intro h2,
-.football-intro p {
-  color: #1f2937 !important;
+.football-page {
+  box-sizing: border-box;
+  width: min(1100px, 94%);
+  max-width: 1100px;
+  margin: 2rem auto 3.5rem;
+  padding: 0;
+  color: #1f2937;
+  background: transparent;
 }
 
-.football-intro p {
-  line-height: 1.9;
+.football-page *,
+.football-page *::before,
+.football-page *::after {
+  box-sizing: border-box;
+}
+
+.football-page p,
+.football-page blockquote,
+.football-page h2,
+.football-page h3,
+.football-page span {
+  visibility: visible;
   opacity: 1;
 }
 
-.football-quote {
-  background: #f8fafc !important;
-  color: #1f2937 !important;
+.football-page .football-hero {
+  display: flex;
+  align-items: flex-end;
+  min-height: 350px;
+  margin: 0 0 2.25rem;
+  overflow: hidden;
+  border-radius: 18px;
+  color: #fff;
+  background-image: linear-gradient(90deg, rgba(9,17,30,.91), rgba(9,17,30,.30)), url("football-hero.jpg");
+  background-position: center 55%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.football-page .football-hero-content {
+  width: 100%;
+  max-width: 760px;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.football-page .football-kicker,
+.football-page .ronaldo-kicker {
+  display: inline-block;
+  margin-bottom: .7rem;
+  color: #fecaca;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.football-page .football-hero h2 {
+  margin: 0 0 1rem;
+  color: #fff !important;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.08;
+}
+
+.football-page .football-hero p {
+  max-width: 650px;
+  margin: 0;
+  color: #f3f4f6 !important;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.football-page .football-intro {
+  max-width: 850px;
+  margin: 0 auto 2.7rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 5px 22px rgba(15,23,42,.08);
+}
+
+.football-page .football-intro h2,
+.football-page .football-section-heading,
+.football-page .football-closing h2,
+.football-page .ronaldo-content h2 {
+  color: #111827 !important;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.football-page .football-intro p,
+.football-page .club-card-content p,
+.football-page .ronaldo-content p,
+.football-page .football-closing p {
+  color: #374151 !important;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.football-page .football-section-heading {
+  margin: 0 0 1.25rem;
+}
+
+.football-page .club-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 0 0 2.75rem;
+}
+
+.football-page .club-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(15,23,42,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.football-page .club-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15,23,42,.13);
+}
+
+.football-page .club-card > img {
+  display: block;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  background: #e5e7eb;
+}
+
+.football-page .club-card-content {
+  padding: 1.5rem;
+}
+
+.football-page .club-label {
+  display: inline-block;
+  margin-bottom: .6rem;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.football-page .manutd .club-label,
+.football-page .manutd .club-link { color: #c81e1e; }
+.football-page .mohunbagan .club-label,
+.football-page .mohunbagan .club-link { color: #006747; }
+
+.football-page .club-card h3 {
+  margin: 0 0 .75rem;
+  color: #111827 !important;
+  font-size: 1.5rem;
+}
+
+.football-page .club-card-content p { margin: 0 0 1.2rem; }
+
+.football-page .club-link {
+  display: inline-block;
+  padding-bottom: .2rem;
+  border-bottom: 2px solid currentColor;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.football-page .club-link:hover { text-decoration: none; opacity: .8; }
+
+/* Cristiano Ronaldo feature */
+.football-page .ronaldo-section {
+  display: grid;
+  grid-template-columns: minmax(240px, .85fr) minmax(0, 1.15fr);
+  align-items: stretch;
+  gap: 0;
+  margin: 0 0 2.5rem;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #111827;
+  box-shadow: 0 8px 26px rgba(15,23,42,.18);
+}
+
+.football-page .ronaldo-image-wrap {
+  min-height: 360px;
+  background: #263244;
+}
+
+.football-page .ronaldo-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.football-page .ronaldo-content {
+  align-self: center;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.football-page .ronaldo-kicker { color: #fca5a5; }
+.football-page .ronaldo-content h2 { margin: 0 0 1rem; color: #fff !important; }
+.football-page .ronaldo-content p { color: #e5e7eb !important; }
+
+.football-page .football-quote {
+  margin: 2.25rem 0;
+  padding: clamp(1.5rem, 4vw, 2rem);
   border-left: 4px solid #da291c;
+  border-radius: 0 12px 12px 0;
+  background: #f8fafc;
+  text-align: center;
 }
 
-.football-quote blockquote {
+.football-page .football-quote blockquote {
+  margin: 0;
   color: #1f2937 !important;
-  opacity: 1;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.9;
 }
 
-.football-quote p {
+.football-page .football-quote p {
+  margin: .8rem 0 0;
   color: #475569 !important;
-  opacity: 1;
+  font-size: .9rem;
+  line-height: 1.65;
 }
 
-.football-closing {
-  background: #f1f5f9 !important;
-  color: #1f2937 !important;
+.football-page .football-closing {
+  margin-top: 2rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  border-radius: 14px;
+  background: #f1f5f9;
+  text-align: center;
 }
 
-.football-closing h2 {
-  color: #111827 !important;
+.football-page .football-closing h2 { margin: 0 0 .8rem; }
+.football-page .football-closing p { max-width: 760px; margin: 0 auto; }
+
+body:has(.football-page) footer {
+  color: #fff;
 }
 
-.football-closing p {
-  color: #475569 !important;
-  opacity: 1;
+@media (max-width: 720px) {
+  .football-page { width: 94%; margin-top: 1.25rem; }
+  .football-page .football-hero { min-height: 310px; border-radius: 12px; }
+  .football-page .club-grid { grid-template-columns: 1fr; }
+  .football-page .club-card > img { height: 220px; }
+  .football-page .ronaldo-section { grid-template-columns: 1fr; }
+  .football-page .ronaldo-image-wrap,
+  .football-page .ronaldo-image-wrap img { min-height: 0; height: auto; max-height: 440px; }
+  .football-page .ronaldo-image-wrap img { aspect-ratio: 4 / 3; }
 }
 
-.club-card-content h3,
-.club-card-content p {
-  opacity: 1;
-}
-
-.club-card-content h3 {
-  color: #111827 !important;
-}
-
-.club-card-content p {
-  color: #475569 !important;
+@media (prefers-reduced-motion: reduce) {
+  .football-page .club-card { transition: none; }
+  .football-page .club-card:hover { transform: none; }
 }
